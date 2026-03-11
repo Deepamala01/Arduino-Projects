@@ -1,0 +1,184 @@
+The Arduino Uno is one of the most popular microcontroller boards used for learning electronics, embedded systems, and robotics. It is based on the ATmega328P and is widely used by beginners and professionals to build interactive electronic projects.
+
+1. Microcontroller (Brain of the Board)
+
+The ATmega328P microcontroller is the main component of the Arduino Uno.
+
+Functions:
+Executes the uploaded program.
+Processes input signals from sensors.
+Controls output devices like LEDs, motors, and displays.
+
+Important specifications:
+Clock speed: 16 MHz
+Flash memory: 32 KB
+SRAM: 2 KB
+EEPROM: 1 KB
+
+Example:
+If you write a program to blink an LED, the ATmega328P reads the code and sends signals to the output pin.
+
+2. Digital Input / Output Pins
+
+Arduino Uno has 14 digital pins (0–13).
+
+Uses:
+Turn LEDs ON/OFF
+Read button input
+Control relays, motors, buzzers
+
+Example:
+
+pinMode(2, OUTPUT);
+digitalWrite(2, HIGH);
+
+Pins 3, 5, 6, 9, 10, 11 support PWM (Pulse Width Modulation) for controlling brightness or motor speed.
+
+3. Analog Input Pins
+
+Arduino Uno has 6 analog input pins (A0–A5).
+These pins read analog voltage signals (0–5V).
+
+Example devices:
+LDR sensor
+Temperature sensor
+Potentiometer
+Gas sensor
+
+Example code:
+
+int sensorValue = analogRead(A0);
+
+The analog signal is converted to digital values 0–1023 using a 10-bit ADC (Analog to Digital Converter).
+
+4. Power Supply
+Arduino can be powered in three ways.
+
+USB Power
+Through USB cable from computer
+Provides 5V
+
+DC Power Jack
+External adapter (7–12V recommended)
+
+Vin Pin
+•External power directly through Vin pin
+
+Power pins available:
+5V
+3.3V
+GND
+Vin
+
+5. USB Port
+The USB port is used for:
+Uploading programs from computer
+Powering the board
+Serial communication
+
+The Arduino uses USB-to-serial conversion to communicate with the computer.
+
+6. Reset Button
+
+The reset button restarts the program from the beginning.
+
+Example:
+If your code is running and you press reset, the program starts again from setup().
+
+7. Voltage Regulator
+
+The voltage regulator converts higher input voltage into stable 5V required for the board.
+
+Example:
+If you connect 9V battery, the regulator converts it to 5V.
+
+8. Crystal Oscillator
+
+Arduino Uno has a 16 MHz crystal oscillator.
+
+Purpose:
+Provides accurate timing signals.
+Controls program execution speed.
+Without this, the microcontroller cannot run correctly.
+
+9. ICSP Header
+
+ICSP means In-Circuit Serial Programming.
+
+Used for:
+Programming the microcontroller directly
+Connecting SPI devices
+
+SPI pins:
+MOSI
+MISO
+SCK
+
+10. TX and RX Pins
+
+Pins 0 (RX) and 1 (TX) are used for serial communication.
+
+Example uses:
+Communication with computer
+Communication with Bluetooth modules
+Communication with GPS modules
+
+11. LED Indicators
+
+Arduino Uno has built-in LEDs.
+
+ON LED
+Shows board is powered
+
+TX LED
+Blinks when data is transmitted
+
+RX LED
+Blinks when data is received
+
+Pin 13 LED
+Built-in LED connected to digital pin 13
+
+Example code:
+
+void setup(){
+pinMode(13, OUTPUT);
+}
+
+void loop(){
+digitalWrite(13, HIGH);
+delay(1000);
+digitalWrite(13, LOW);
+delay(1000);
+}
+
+12. Memory Types in Arduino
+
+Arduino uses three types of memory.
+Memory	Purpose
+Flash	Stores program code
+SRAM	Temporary data storage
+EEPROM	Permanent data storage
+
+	
+13. Basic Working of Arduino
+
+The working process of Arduino is simple.
+
+Write code in Arduino IDE
+Compile the code.
+Upload the code to Arduino.
+Microcontroller executes instructions.
+Inputs are processed and outputs are controlled.
+
+14. Applications of Arduino UNO
+
+Arduino Uno is used in many projects:
+
+LED blinking projects
+Traffic light systems
+Home automation
+Robotics
+IoT devices
+Sensor interfacing
+Weather monitoring systems
